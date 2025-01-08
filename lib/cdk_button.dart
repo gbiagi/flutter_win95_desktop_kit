@@ -43,13 +43,13 @@ class CDKButton extends StatefulWidget {
   final bool enabled;
 
   const CDKButton({
-    Key? key,
+    super.key,
     this.onPressed,
     required this.child,
     this.style = CDKButtonStyle.normal,
     this.isLarge = false,
     this.enabled = true,
-  }) : super(key: key);
+  });
 
   @override
   CDKButtonState createState() => CDKButtonState();
@@ -84,7 +84,7 @@ class CDKButtonState extends State<CDKButton> {
         case CDKButtonStyle.action:
           decoration = BoxDecoration(
               color: theme.isAppFocused ? theme.accent200 : CDKTheme.grey200,
-              borderRadius: BorderRadius.circular(6.0),
+              // borderRadius: BorderRadius.circular(6.0),
               boxShadow: [shadow]);
           color = theme.isAppFocused ? theme.accent600 : CDKTheme.grey;
           textStyle = TextStyle(
@@ -98,7 +98,7 @@ class CDKButtonState extends State<CDKButton> {
         case CDKButtonStyle.destructive:
           decoration = BoxDecoration(
               color: theme.backgroundSecondary0,
-              borderRadius: BorderRadius.circular(6.0),
+              // borderRadius: BorderRadius.circular(6.0),
               boxShadow: [shadow]);
           color = CDKTheme.grey;
           textStyle = TextStyle(
@@ -120,7 +120,7 @@ class CDKButtonState extends State<CDKButton> {
                       ? [theme.accent100, theme.accent]
                       : [theme.accent300, theme.accent500],
                 ),
-                borderRadius: BorderRadius.circular(6.0),
+                // borderRadius: BorderRadius.circular(6.0),
                 boxShadow: [shadow]);
             color = _isPressed ? theme.accent50 : CDKTheme.white;
             textStyle = TextStyle(
@@ -133,7 +133,7 @@ class CDKButtonState extends State<CDKButton> {
                 color:
                     _isPressed ? CDKTheme.grey200 : theme.backgroundSecondary0,
                 border: Border.all(color: theme.backgroundSecondary1),
-                borderRadius: BorderRadius.circular(6.0),
+                // borderRadius: BorderRadius.circular(6.0),
                 boxShadow: [shadow]);
             color = CDKTheme.black;
             textStyle = TextStyle(
@@ -156,7 +156,7 @@ class CDKButtonState extends State<CDKButton> {
               border: theme.isLight
                   ? Border.all(color: CDKTheme.grey70)
                   : Border.all(color: CDKTheme.grey600),
-              borderRadius: BorderRadius.circular(6.0),
+              // borderRadius: BorderRadius.circular(6.0),
               boxShadow: [shadow]);
           color = CDKTheme.red;
           textStyle = TextStyle(
@@ -178,7 +178,7 @@ class CDKButtonState extends State<CDKButton> {
               border: theme.isLight
                   ? Border.all(color: CDKTheme.grey70)
                   : Border.all(color: CDKTheme.grey600),
-              borderRadius: BorderRadius.circular(6.0),
+              // borderRadius: BorderRadius.circular(6.0),
               boxShadow: [shadow]);
           color = theme.colorText;
           textStyle = TextStyle(

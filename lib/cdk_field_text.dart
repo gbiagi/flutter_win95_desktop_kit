@@ -23,7 +23,7 @@ class CDKFieldText extends StatefulWidget {
   final TextAlign textAlign;
 
   const CDKFieldText({
-    Key? key,
+    super.key,
     this.isRounded = false,
     this.obscureText = false,
     this.placeholder = '',
@@ -38,7 +38,7 @@ class CDKFieldText extends StatefulWidget {
     this.enabled = true,
     this.onFocusChanged,
     this.textAlign = TextAlign.left,
-  }) : super(key: key);
+  });
 
   @override
   CDKFieldTextState createState() => CDKFieldTextState();

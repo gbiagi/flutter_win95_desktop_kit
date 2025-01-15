@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter95/flutter95.dart';
+import 'cdk_globals.dart';
 
 // Custom font import
 import 'package:flutter/services.dart';
@@ -34,14 +34,15 @@ class CDKButtonState extends State<CDKButton> {
   Widget build(BuildContext context) {
     // Define styles based on the button's state and style.
     BoxDecoration decoration = _isPressed
-        ? Flutter95.pressedDecorationOutside
-        : Flutter95.elevatedDecorationOutside;
+        ? CDKGlobals.pressedDecorationOutside
+        : CDKGlobals.elevatedDecorationOutside;
 
-    BoxDecoration innerDecoration =
-        _isPressed ? Flutter95.pressedDecoration : Flutter95.elevatedDecoration;
+    BoxDecoration innerDecoration = _isPressed
+        ? CDKGlobals.pressedDecoration
+        : CDKGlobals.elevatedDecoration;
 
     TextStyle textStyle =
-        (widget.enabled ? Flutter95.textStyle : Flutter95.disabledTextStyle)
+        (widget.enabled ? CDKGlobals.textStyle : CDKGlobals.disabledTextStyle)
             .copyWith(
       fontFamily: 'Win95',
     );

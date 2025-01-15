@@ -30,7 +30,7 @@ class CDKTheme extends ChangeNotifier {
 
   // Abaliable theme colors
   static const Map<String, Color> systemColors = {
-    "systemBlue": CupertinoColors.systemBlue,
+    "systemBlue": Color(0xFF000e7a),
     "systemPurple": CupertinoColors.systemPurple,
     "systemPink": CupertinoColors.systemPink,
     "systemRed": CupertinoColors.systemRed,
@@ -144,10 +144,10 @@ class CDKTheme extends ChangeNotifier {
     // Set light/dark appearance colors and return theme
     if (appearance == "light") {
       isLight = true;
-      background = CupertinoColors.white;
-      backgroundSecondary0 = CupertinoColors.white;
-      backgroundSecondary1 = CupertinoColors.systemGrey5;
-      backgroundSecondary2 = const Color.fromRGBO(245, 245, 245, 1);
+      background = Color(0xFFd2d2d2);
+      backgroundSecondary0 = Color(0xFFd2d2d2);
+      backgroundSecondary1 = Color(0xFFd2d2d2);
+      backgroundSecondary2 = Color(0xFFd2d2d2);
       colorText = CupertinoColors.black;
       colorTextSecondary = CupertinoColors.white;
     } else {

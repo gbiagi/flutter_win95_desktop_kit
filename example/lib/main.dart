@@ -19,8 +19,7 @@ void main() async {
 
   runApp(const CDKApp(
     defaultAppearance: "light", // system, light, dark
-    defaultColor:
-        "systemGray", // systemBlue, systemPurple, systemPink, systemRed, systemOrange, systemYellow, systemGreen, systemGray
+    defaultColor: "systemBlue",
     child: Layout(),
   ));
 }

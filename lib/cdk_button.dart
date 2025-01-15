@@ -88,6 +88,7 @@ class CDKButtonState extends State<CDKButton> {
               boxShadow: [shadow]);
           color = theme.isAppFocused ? theme.accent600 : CDKTheme.grey;
           textStyle = TextStyle(
+            fontFamily: 'Win95',
             fontSize: _fontSize,
             color: color,
           );
@@ -104,6 +105,7 @@ class CDKButtonState extends State<CDKButton> {
           textStyle = TextStyle(
             fontSize: _fontSize,
             color: color,
+            fontFamily: 'Win95',
           );
           iconTheme = IconThemeData(color: color, size: _fontSize + 2);
           break;
@@ -126,6 +128,7 @@ class CDKButtonState extends State<CDKButton> {
             textStyle = TextStyle(
               fontSize: _fontSize,
               color: color,
+              fontFamily: 'Win95',
             );
             iconTheme = IconThemeData(color: color, size: _fontSize + 2);
           } else {
@@ -137,7 +140,7 @@ class CDKButtonState extends State<CDKButton> {
                 boxShadow: [shadow]);
             color = CDKTheme.black;
             textStyle = TextStyle(
-              fontFamily: 'W95FA',
+              fontFamily: 'Win95',
               fontSize: _fontSize,
               color: color,
             );
@@ -161,6 +164,7 @@ class CDKButtonState extends State<CDKButton> {
               boxShadow: [shadow]);
           color = CDKTheme.red;
           textStyle = TextStyle(
+            fontFamily: 'Win95',
             fontSize: _fontSize,
             color: color,
           );
@@ -183,6 +187,7 @@ class CDKButtonState extends State<CDKButton> {
               boxShadow: [shadow]);
           color = theme.colorText;
           textStyle = TextStyle(
+            fontFamily: 'Win95',
             fontSize: _fontSize,
             color: color,
           );

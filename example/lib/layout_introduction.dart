@@ -18,10 +18,7 @@ class _LayoutIntroductionState extends State<LayoutIntroduction> {
       const Padding(
           padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
           child: Text('Introduction:',
-              style: TextStyle(
-                  fontFamily: 'Win95',
-                  fontSize: 32,
-                  fontWeight: FontWeight.w200))),
+              style: TextStyle(fontSize: 32, fontWeight: FontWeight.w200))),
       const Padding(
           padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
           child: Text(

@@ -21,6 +21,10 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  fonts:
+    - family: Win95
+      fonts:
+        - asset: fonts/W95FA.otf
 
 platforms:
   android:

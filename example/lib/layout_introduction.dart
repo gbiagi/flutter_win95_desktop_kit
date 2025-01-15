@@ -18,11 +18,16 @@ class _LayoutIntroductionState extends State<LayoutIntroduction> {
       const Padding(
           padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
           child: Text('Introduction:',
-              style: TextStyle(fontSize: 32, fontWeight: FontWeight.w200))),
+              style: TextStyle(
+                  fontFamily: 'Win95',
+                  fontSize: 32,
+                  fontWeight: FontWeight.w200))),
       const Padding(
           padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
           child: Text(
-              'This project, Flutter Cupertino Desktop Kit (CDK), defines Flutter widgets for Desktop, providing a macOS style aesthetic, built upon the foundation of Cupertino widgets.')),
+            'This project, Flutter Cupertino Desktop Kit (CDK), defines Flutter widgets for Desktop, providing a macOS style aesthetic, built upon the foundation of Cupertino widgets.',
+            style: TextStyle(fontFamily: "Win95"),
+          )),
       const Padding(
           padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
           child: Text(

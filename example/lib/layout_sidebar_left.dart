@@ -52,7 +52,7 @@ class LayoutButtonsState extends State<LayoutSidebarLeft> {
         }),
       ),
       const SizedBox(height: 25),
-      Padding(
+      /* Padding(
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
           child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -102,7 +102,7 @@ class LayoutButtonsState extends State<LayoutSidebarLeft> {
                     print("Color changed: $colorName");
                   },
                 ),
-              ]))
+              ])) */
     ]);
   }
 }

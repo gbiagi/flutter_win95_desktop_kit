@@ -137,6 +137,7 @@ class CDKButtonState extends State<CDKButton> {
                 boxShadow: [shadow]);
             color = CDKTheme.black;
             textStyle = TextStyle(
+              fontFamily: 'W95FA',
               fontSize: _fontSize,
               color: color,
             );

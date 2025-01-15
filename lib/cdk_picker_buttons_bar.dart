@@ -30,7 +30,7 @@ class CDKPickerButtonsBar extends StatefulWidget {
 
 class CDKPickerButtonsBarState extends State<CDKPickerButtonsBar> {
   // Border radius for button edges.
-  final double _borderRadius = 4.0;
+  final double _borderRadius = 0.0;
 
   @override
   void initState() {
@@ -70,11 +70,11 @@ class CDKPickerButtonsBarState extends State<CDKPickerButtonsBar> {
             ? CDKTheme.black
             : CDKTheme.white;
     if (child is Text) {
-      double size = 12.0;
+      double size = 15.0;
       return Text(
         child.data!,
         style: child.style?.copyWith(color: color, fontSize: size) ??
-            TextStyle(color: color, fontSize: size),
+            TextStyle(color: color, fontSize: size, fontFamily: 'Win95'),
       );
     }
     if (child is Icon) {

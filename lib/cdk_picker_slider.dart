@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_cupertino_desktop_kit/cdk.dart';
 import 'cdk_theme_notifier.dart';
 import 'cdk_theme.dart';
 
@@ -72,7 +73,7 @@ class CDKPickerSliderState extends State<CDKPickerSlider> {
       child: CustomPaint(
         painter: CDKPickerSliderPainter(
           colorAccent: theme.accent,
-          colorBar: theme.backgroundSecondary1,
+          colorBar: CDKGlobals.grays[2],
           colorCircle: theme.backgroundSecondary0,
           value: widget.value,
           hasAppFocus: theme.isAppFocused, // Border color
@@ -104,12 +105,12 @@ class CDKPickerSliderPainter extends CustomPainter {
       ..style = PaintingStyle.fill;
 
     Paint progressPaint = Paint()
-      ..color = hasAppFocus ? colorAccent : CDKTheme.grey
+      ..color = hasAppFocus ? colorAccent : CDKTheme.white
       ..style = PaintingStyle.fill;
 
     // Calcula l'alçada i la posició vertical centrada de la barra
-    const double barHeight = 6.0;
-    const Radius barHeightHalf = Radius.circular(barHeight / 2);
+    const double barHeight = 20.0;
+    const Radius barHeightHalf = Radius.circular(0.0);
     final double verticalOffset = (size.height - barHeight) / 2;
 
     // Crea rectangles amb els costats arrodonits
@@ -118,8 +119,7 @@ class CDKPickerSliderPainter extends CustomPainter {
       verticalOffset,
       size.width,
       verticalOffset + barHeight,
-      const Radius.circular(barHeight /
-          2), // El radi és la meitat de l'alçada per fer-ho completament arrodonit
+      barHeightHalf,
     );
 
     double progressWidth = size.width * value;
@@ -132,33 +132,45 @@ class CDKPickerSliderPainter extends CustomPainter {
       barHeightHalf,
     );
 
+    // Create border paint
+    final borderPaint = Paint()
+      ..color = CDKGlobals.black
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 0.5;
+
     // Dibuixa el fons i el progrés
     canvas.drawRRect(backgroundRRect, backgroundPaint);
     canvas.drawRRect(progressRRect, progressPaint);
+    canvas.drawRRect(backgroundRRect, borderPaint); // Draw border last
 
-    // Dibuixar la sombra
-    final double radius = size.height / 3;
-    final circleRail = size.width - radius * 2;
-    final circleProgress = (progressWidth * circleRail) / size.width;
-    final Offset center = Offset(radius + circleProgress, size.height / 2);
-    final shadowPaint = Paint()
-      ..color = CDKTheme.grey50
-      ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 1.0);
-    final circlePath = Path()
-      ..addOval(Rect.fromCircle(center: center, radius: radius));
-    canvas.drawShadow(circlePath, shadowPaint.color, 1, false);
+    // Draw the vertical rectangle following the progress bar
+    const double rectWidth = 10.0;
+    final double rectHeight = size.height;
+    final double rectX = progressWidth - (rectWidth / 2);
+    const double rectY = 0.0;
+    final rectPaint = Paint()
+      ..color = colorCircle
+      ..style = PaintingStyle.fill;
+    final rect = Rect.fromLTWH(rectX, rectY, rectWidth, rectHeight);
+    canvas.drawRect(rect, rectPaint);
 
-    // Dibuixar el cercle principal
-    final paint = Paint()
-      ..style = PaintingStyle.fill
-      ..color = colorCircle;
-    canvas.drawCircle(center, radius, paint);
-
-    final paintBorder = Paint()
+    // Draw the border for the rectangle
+    final rectBorderPaint = Paint()
+      ..color = CDKGlobals.black
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 0.75
-      ..color = CDKTheme.grey100;
-    canvas.drawCircle(center, radius, paintBorder);
+      ..strokeWidth = 0.0;
+    canvas.drawRect(rect, rectBorderPaint);
+
+    // Draw the small vertical line inside the rectangle
+    const double lineWidth = 2.0;
+    final double lineHeight = rectHeight / 2;
+    final double lineX = progressWidth - (lineWidth / 2);
+    final double lineY = (rectHeight - lineHeight) / 2;
+    final linePaint = Paint()
+      ..color = CDKTheme.black
+      ..style = PaintingStyle.fill;
+    final line = Rect.fromLTWH(lineX, lineY, lineWidth, lineHeight);
+    canvas.drawRect(line, linePaint);
   }
 
   @override

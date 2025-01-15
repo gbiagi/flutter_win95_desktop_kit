@@ -53,14 +53,12 @@ class LayoutState extends State<Layout> {
 
   @override
   Widget build(BuildContext context) {
-    CDKTheme theme = CDKThemeNotifier.of(context)!.changeNotifier;
-
     Widget centralWidget =
         options.firstWhere((element) => element[0] == _section)[1];
 
     return CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
-          backgroundColor: theme.backgroundSecondary0.withOpacity(0.5),
+          backgroundColor: CDKTheme.systemBlue,
           middle: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,

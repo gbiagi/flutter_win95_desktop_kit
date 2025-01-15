@@ -50,6 +50,7 @@ class CDKTheme extends ChangeNotifier {
   static const Color cyan = Color.fromRGBO(0, 255, 255, 1.0);
   static const Color blue = Color.fromRGBO(0, 0, 255, 1.0);
   static const Color magenta = Color.fromRGBO(255, 0, 255, 1.0);
+  static const Color systemBlue = Color(0xFF000e7a);
 
   static const Color grey50 = Color.fromRGBO(230, 230, 230, 1.0);
   static const Color grey60 = Color.fromRGBO(222, 222, 222, 1.0);
@@ -68,8 +69,8 @@ class CDKTheme extends ChangeNotifier {
   // Default colors for bacground and text (modified by dark/light mode)
   Color background = CupertinoColors.white;
   Color backgroundSecondary0 = CupertinoColors.white;
-  Color backgroundSecondary1 = CupertinoColors.systemGrey5;
-  Color backgroundSecondary2 = const Color.fromRGBO(245, 245, 245, 1);
+  Color backgroundSecondary1 = CupertinoColors.white;
+  Color backgroundSecondary2 = CupertinoColors.white;
   Color colorText = CupertinoColors.black;
   Color colorTextSecondary = CupertinoColors.white;
 

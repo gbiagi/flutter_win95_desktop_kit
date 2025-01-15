@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'cdk_globals.dart';
 import 'cdk_theme_notifier.dart';
 import 'cdk_theme.dart';
 
@@ -88,11 +89,11 @@ class CDKPickerButtonsSegmentedState extends State<CDKPickerButtonsSegmented> {
   /// Adjusts the widget style based on the state and theme.
   Widget fixWidgetStyle(Widget widget, Color color) {
     if (widget is Text) {
-      double size = 12.0;
+      double size = 15.0;
       return Text(
         widget.data!,
         style: widget.style?.copyWith(color: color, fontSize: size) ??
-            TextStyle(color: color, fontSize: size),
+            TextStyle(color: color, fontSize: size, fontFamily: 'Win95'),
       );
     }
     if (widget is Icon) {
@@ -122,7 +123,7 @@ class CDKPickerButtonsSegmentedState extends State<CDKPickerButtonsSegmented> {
           ? const BoxDecoration()
           : BoxDecoration(
               color: theme.backgroundSecondary1,
-              borderRadius: BorderRadius.circular(6.0),
+              borderRadius: BorderRadius.circular(0.0),
               border: Border.all(
                 color: CDKTheme.grey300,
                 width: 0.5,
@@ -143,19 +144,19 @@ class CDKPickerButtonsSegmentedState extends State<CDKPickerButtonsSegmented> {
                   color: widget.isAccent
                       ? theme.isAppFocused
                           ? theme.accent
-                          : CDKTheme.grey300
+                          : CDKTheme.white
                       : theme.isAppFocused
                           ? theme.backgroundSecondary0
-                          : CDKTheme.grey300,
-                  borderRadius: BorderRadius.circular(6.0),
+                          : CDKTheme.white,
+                  borderRadius: BorderRadius.circular(0.0),
                   boxShadow: widget.isAccent
                       ? []
                       : [
-                          BoxShadow(
-                            color: CDKTheme.black.withOpacity(0.15),
+                          const BoxShadow(
+                            color: CDKGlobals.primary,
                             spreadRadius: 0,
                             blurRadius: 1,
-                            offset: const Offset(0, 1),
+                            offset: Offset(0, 1),
                           )
                         ],
                 ),

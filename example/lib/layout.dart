@@ -68,7 +68,10 @@ class LayoutState extends State<Layout> {
                     onPressed: () {
                       toggleLeftSidebar();
                     }),
-                Text(_section),
+                Text(
+                  _section,
+                  style: const TextStyle(color: CDKTheme.white),
+                ),
                 CDKButtonIcon(
                   icon: CupertinoIcons.sidebar_right,
                   onPressed: () {

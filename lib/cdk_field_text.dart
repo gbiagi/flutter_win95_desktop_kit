@@ -72,8 +72,8 @@ class CDKFieldTextState extends State<CDKFieldText> {
     CDKTheme theme = CDKThemeNotifier.of(context)!.changeNotifier;
 
     final BorderRadius borderRadius = widget.isRounded
-        ? BorderRadius.circular(25.0)
-        : BorderRadius.circular(4.0);
+        ? BorderRadius.circular(0.0)
+        : BorderRadius.circular(0.0);
 
     return CupertinoTextField(
       textAlign: widget
@@ -86,7 +86,7 @@ class CDKFieldTextState extends State<CDKFieldText> {
       onSubmitted: widget.onSubmitted,
       padding: const EdgeInsets.fromLTRB(4, 2, 4, 4),
       decoration: BoxDecoration(
-          color: theme.background,
+          color: CDKTheme.white,
           borderRadius: borderRadius,
           border: Border.all(
             color: widget.enabled
@@ -100,9 +100,9 @@ class CDKFieldTextState extends State<CDKFieldText> {
               ? [
                   BoxShadow(
                     color: theme.isAppFocused
-                        ? theme.accent200
+                        ? CDKTheme.black
                         : CDKTheme.transparent,
-                    spreadRadius: 1.5,
+                    spreadRadius: 0.5,
                     blurRadius: 0.7,
                     offset: const Offset(0, 0),
                   )

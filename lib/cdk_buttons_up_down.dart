@@ -71,8 +71,8 @@ class CDKButtonsUpDownState extends State<CDKButtonsUpDown> {
     var decorationUp = BoxDecoration(
       color: backgroundUp,
       borderRadius: const BorderRadius.only(
-        topLeft: Radius.circular(5.0),
-        topRight: Radius.circular(5.0),
+        topLeft: Radius.circular(0.0),
+        topRight: Radius.circular(0.0),
       ),
       border: Border.all(
         color: CDKTheme.grey,
@@ -85,8 +85,8 @@ class CDKButtonsUpDownState extends State<CDKButtonsUpDown> {
     var decorationDown = BoxDecoration(
       color: backgroundDown,
       borderRadius: const BorderRadius.only(
-        bottomLeft: Radius.circular(5.0),
-        bottomRight: Radius.circular(5.0),
+        bottomLeft: Radius.circular(0.0),
+        bottomRight: Radius.circular(0.0),
       ),
       border: Border.all(
         color: CDKTheme.grey,

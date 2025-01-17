@@ -145,10 +145,10 @@ class CDKTheme extends ChangeNotifier {
     // Set light/dark appearance colors and return theme
     if (appearance == "light") {
       isLight = true;
-      background = Color(0xFFd2d2d2);
-      backgroundSecondary0 = Color(0xFFd2d2d2);
-      backgroundSecondary1 = Color(0xFFd2d2d2);
-      backgroundSecondary2 = Color(0xFFd2d2d2);
+      background = const Color(0xFFd2d2d2);
+      backgroundSecondary0 = const Color(0xFFd2d2d2);
+      backgroundSecondary1 = const Color(0xFFd2d2d2);
+      backgroundSecondary2 = const Color(0xFFd2d2d2);
       colorText = CupertinoColors.black;
       colorTextSecondary = CupertinoColors.white;
     } else {

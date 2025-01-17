@@ -62,13 +62,7 @@ class CDKPickerButtonsBarState extends State<CDKPickerButtonsBar> {
   }
 
   Widget fixWidgetStyle(Widget child, int index, CDKTheme theme) {
-    Color color = theme.isLight
-        ? widget.selectedStates[index] && theme.isAppFocused
-            ? CDKTheme.white
-            : CDKTheme.black
-        : widget.selectedStates[index] && !theme.isAppFocused
-            ? CDKTheme.black
-            : CDKTheme.white;
+    Color color = CDKTheme.black;
     if (child is Text) {
       double size = 15.0;
       return Text(
@@ -119,13 +113,26 @@ class CDKPickerButtonsBarState extends State<CDKPickerButtonsBar> {
                 end: Alignment.bottomCenter,
                 colors: widget.selectedStates[index]
                     ? theme.isAppFocused
-                        ? [theme.accent200, theme.accent500]
-                        : [CDKTheme.grey200, CDKTheme.grey300]
+                        ? [CDKTheme.grey200, CDKTheme.grey200]
+                        : [CDKTheme.grey100, CDKTheme.grey100]
                     : [theme.backgroundSecondary0, theme.backgroundSecondary1],
               ),
               borderRadius: borderRadius,
+              border: widget.selectedStates[index]
+                  ? const Border(
+                      top: BorderSide(color: CDKTheme.black, width: 1),
+                      left: BorderSide(color: CDKTheme.black, width: 1),
+                      bottom: BorderSide(color: CDKTheme.white, width: 1),
+                      right: BorderSide(color: CDKTheme.white, width: 1),
+                    )
+                  : null,
             ),
-            child: fixWidgetStyle(widget.options[index], index, theme),
+            child: Container(
+              padding: widget.selectedStates[index]
+                  ? const EdgeInsets.only(top: 1, left: 1)
+                  : EdgeInsets.zero,
+              child: fixWidgetStyle(widget.options[index], index, theme),
+            ),
           ),
         ),
       );

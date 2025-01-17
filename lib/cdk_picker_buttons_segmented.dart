@@ -132,9 +132,7 @@ class CDKPickerButtonsSegmentedState extends State<CDKPickerButtonsSegmented> {
       child: Stack(
         children: [
           if (_rects.isNotEmpty)
-            AnimatedPositioned(
-              duration: Duration(milliseconds: _animationMillis),
-              curve: Curves.easeInOut,
+            Positioned(
               left: _getPositionLeft(widget.selectedIndex),
               top: 2,
               width: _getPositionWidth(widget.selectedIndex),
@@ -143,17 +141,25 @@ class CDKPickerButtonsSegmentedState extends State<CDKPickerButtonsSegmented> {
                 decoration: BoxDecoration(
                   color: widget.isAccent
                       ? theme.isAppFocused
-                          ? theme.accent
+                          ? CDKTheme.grey100
                           : CDKTheme.white
                       : theme.isAppFocused
                           ? theme.backgroundSecondary0
                           : CDKTheme.white,
                   borderRadius: BorderRadius.circular(0.0),
+                  border: widget.isAccent
+                      ? const Border(
+                          top: BorderSide(color: CDKTheme.black, width: 1),
+                          left: BorderSide(color: CDKTheme.black, width: 1),
+                          bottom: BorderSide(color: CDKTheme.white, width: 1),
+                          right: BorderSide(color: CDKTheme.white, width: 1),
+                        )
+                      : null,
                   boxShadow: widget.isAccent
                       ? []
                       : [
                           const BoxShadow(
-                            color: CDKGlobals.primary,
+                            color: CDKGlobals.black,
                             spreadRadius: 0,
                             blurRadius: 1,
                             offset: Offset(0, 1),
@@ -178,7 +184,7 @@ class CDKPickerButtonsSegmentedState extends State<CDKPickerButtonsSegmented> {
                           end: widget.isAccent &&
                                   index == widget.selectedIndex &&
                                   theme.isAppFocused
-                              ? CDKTheme.white
+                              ? CDKTheme.black
                               : theme.colorText,
                         ),
                         builder: (BuildContext context, Color? color,

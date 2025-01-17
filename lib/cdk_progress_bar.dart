@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
+import 'cdk_globals.dart';
 import 'cdk_theme_notifier.dart';
 import 'cdk_theme.dart';
 
@@ -178,33 +179,41 @@ class ProgressBarPainter extends CustomPainter {
       ..style = PaintingStyle.fill;
 
     Paint progressPaint = Paint()
-      ..color = hasAppFocus ? colorAccent : CDKTheme.grey
+      ..color = hasAppFocus ? colorAccent : CDKTheme.white
       ..style = PaintingStyle.fill;
 
-    // Calcula l'alçada i la posició vertical centrada de la barra
-    const double barHeight = 6.0;
-    const Radius barHeightHalf = Radius.circular(barHeight / 2);
+    // Border paint
+    final borderPaint = Paint()
+      ..color = CDKGlobals.black
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 0.5;
+
+    const double barHeight = 20.0;
+    const Radius barHeightHalf = Radius.circular(0.0);
     final double verticalOffset = (size.height - barHeight) / 2;
 
-    // Crea rectangles amb els costats arrodonits
     RRect backgroundRRect = RRect.fromLTRBR(
       0,
       verticalOffset,
       size.width,
       verticalOffset + barHeight,
-      const Radius.circular(barHeight /
-          2), // El radi és la meitat de l'alçada per fer-ho completament arrodonit
+      barHeightHalf,
     );
 
-    double progressWidth =
-        isIndeterminate ? size.width / 4 : size.width * progress;
+    double progressWidth = size.width * progress;
 
-    // For indeterminate state
     if (isIndeterminate) {
-      double leftProgressStart = size.width * progress - (size.width / 6);
+      // Define number of segments for jumping animation
+      const int segments = 8;
+      final double segmentWidth = size.width / segments;
+
+      // Round progress to nearest segment position
+      final int currentSegment = (progress * segments).floor();
+      double leftProgressStart =
+          (currentSegment * segmentWidth) - (size.width / 6);
       double progressEnd = leftProgressStart + (size.width / 3);
 
-      // Asegurar que el progrés indeterminat no surti dels límits
+      // Clamp values
       leftProgressStart = leftProgressStart.clamp(0.0, size.width);
       progressEnd = progressEnd.clamp(0.0, size.width);
 
@@ -216,11 +225,14 @@ class ProgressBarPainter extends CustomPainter {
         barHeightHalf,
       );
 
-      // Dibuixa el fons i el progrés
+      // Draw background and progress
       canvas.drawRRect(backgroundRRect, backgroundPaint);
       if (isIndeterminateAnimating) {
         canvas.drawRRect(progressRRect, progressPaint);
       }
+
+      // Draw border last
+      canvas.drawRRect(backgroundRRect, borderPaint);
     } else {
       RRect progressRRect = RRect.fromLTRBR(
         0,
@@ -230,9 +242,29 @@ class ProgressBarPainter extends CustomPainter {
         barHeightHalf,
       );
 
-      // Dibuixa el fons i el progrés
+      // Draw background and progress
       canvas.drawRRect(backgroundRRect, backgroundPaint);
       canvas.drawRRect(progressRRect, progressPaint);
+
+      // Draw segments
+      const int numberOfSegments = 6;
+      const double segmentLineWidth = 1.0;
+      final double segmentSpacing = size.width / numberOfSegments;
+      final segmentPaint = Paint()
+        ..color = CDKTheme.grey.withOpacity(1.0)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = segmentLineWidth;
+
+      for (int i = 1; i < numberOfSegments; i++) {
+        final double x = segmentSpacing * i;
+        if (x <= progressWidth) {
+          canvas.drawLine(Offset(x, verticalOffset),
+              Offset(x, verticalOffset + barHeight), segmentPaint);
+        }
+      }
+
+      // Draw border last
+      canvas.drawRRect(backgroundRRect, borderPaint);
     }
   }
 

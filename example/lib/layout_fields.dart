@@ -126,32 +126,6 @@ class _LayoutFieldsState extends State<LayoutFields> {
                   onValueChanged: (double value) {},
                 ))),
       ]),
-      const Padding(padding: EdgeInsets.all(8), child: Text('CDKField360:')),
-      Wrap(children: [
-        Padding(
-            padding: const EdgeInsets.all(8),
-            child: SizedBox(
-                width: 150,
-                child: CDKField360(
-                  value: _valueNumeric360,
-                  onChanged: (double value) {
-                    setState(() {
-                      _valueNumeric360 = value;
-                    });
-                  },
-                ))),
-        Padding(
-            padding: const EdgeInsets.all(8),
-            child: SizedBox(
-                width: 150,
-                child: CDKField360(
-                  enabled: false,
-                  onChanged: (double value) {
-                    // ignore: avoid_print
-                    print("Field360: $value");
-                  },
-                ))),
-      ]),
       const Padding(
           padding: EdgeInsets.all(8), child: Text('CDKFieldNumericSlider:')),
       Wrap(children: [

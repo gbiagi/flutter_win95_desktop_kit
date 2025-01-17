@@ -30,20 +30,6 @@ class _LayoutPickersState extends State<LayoutPickers> {
 
     return ListView(children: [
       const SizedBox(height: 8),
-      const Padding(padding: EdgeInsets.all(8), child: Text('CDKPicker360:')),
-      Wrap(crossAxisAlignment: WrapCrossAlignment.center, children: [
-        Padding(
-            padding: const EdgeInsets.all(8),
-            child: CDKPicker360(
-              value: _angle,
-              onChanged: (angle) {
-                setState(() {
-                  _angle = angle;
-                });
-              },
-            )),
-        Text(_angle.toStringAsFixed(2), style: const TextStyle(fontSize: 12)),
-      ]),
       const SizedBox(height: 8),
       const Padding(
           padding: EdgeInsets.all(8), child: Text('CDKPickerSlider:')),

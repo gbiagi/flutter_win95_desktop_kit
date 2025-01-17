@@ -9,12 +9,12 @@ class CDKButtonCheckBox extends StatefulWidget {
   final bool enabled;
 
   const CDKButtonCheckBox({
-    Key? key,
+    super.key,
     required this.value,
     this.onChanged,
     this.label,
     this.enabled = true,
-  }) : super(key: key);
+  });
 
   @override
   _CDKButtonCheckBoxState createState() => _CDKButtonCheckBoxState();

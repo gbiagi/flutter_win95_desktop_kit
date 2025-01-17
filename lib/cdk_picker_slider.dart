@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_cupertino_desktop_kit/cdk.dart';
-import 'cdk_theme_notifier.dart';
-import 'cdk_theme.dart';
 
 // Copyright © 2023 Albert Palacios. All Rights Reserved.
 // Licensed under the BSD 3-clause license, see LICENSE file for details.
@@ -141,6 +139,25 @@ class CDKPickerSliderPainter extends CustomPainter {
     // Dibuixa el fons i el progrés
     canvas.drawRRect(backgroundRRect, backgroundPaint);
     canvas.drawRRect(progressRRect, progressPaint);
+
+    // Draw segments
+    const int numberOfSegments = 6;
+    const double segmentLineWidth = 1.0;
+    final double segmentSpacing = size.width / numberOfSegments;
+    final segmentPaint = Paint()
+      ..color = CDKTheme.grey.withOpacity(1.0)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = segmentLineWidth;
+
+    for (int i = 1; i < numberOfSegments; i++) {
+      final double x = segmentSpacing * i;
+      if (x <= progressWidth) {
+        // Only draw if within progress
+        canvas.drawLine(Offset(x, verticalOffset),
+            Offset(x, verticalOffset + barHeight), segmentPaint);
+      }
+    }
+
     canvas.drawRRect(backgroundRRect, borderPaint); // Draw border last
 
     // Draw the vertical rectangle following the progress bar

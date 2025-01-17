@@ -1,9 +1,6 @@
-import 'package:flutter/cupertino.dart';
-import 'cdk_theme_notifier.dart';
-import 'cdk_theme.dart';
-
-// Copyright © 2023 Albert Palacios. All Rights Reserved.
-// Licensed under the BSD 3-clause license, see LICENSE file for details.
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'cdk_globals.dart';
 
 class CDKButtonIcon extends StatefulWidget {
   final VoidCallback? onPressed;
@@ -15,7 +12,7 @@ class CDKButtonIcon extends StatefulWidget {
   const CDKButtonIcon({
     super.key,
     this.onPressed,
-    this.icon = CupertinoIcons.bell_fill,
+    this.icon = Icons.help,
     this.size = 24.0,
     this.isCircle = false,
     this.isSelected = false,
@@ -28,6 +25,7 @@ class CDKButtonIcon extends StatefulWidget {
 class CDKButtonIconState extends State<CDKButtonIcon> {
   bool _isPressed = false;
   bool _isHovering = false;
+
   void _onTapDown(TapDownDetails details) {
     setState(() => _isPressed = true);
   }
@@ -50,31 +48,15 @@ class CDKButtonIconState extends State<CDKButtonIcon> {
 
   @override
   Widget build(BuildContext context) {
-    CDKTheme theme = CDKThemeNotifier.of(context)!.changeNotifier;
+    BoxDecoration decoration = _isPressed
+        ? CDKGlobals.pressedDecorationOutside
+        : CDKGlobals.elevatedDecorationOutside;
 
-    final Color backgroundColor = theme.isLight
-        ? _isPressed
-            ? CDKTheme.grey70
-            : _isHovering
-                ? CDKTheme.grey50
-                : widget.isSelected
-                    ? theme.backgroundSecondary1
-                    : CDKTheme.transparent
-        : _isPressed
-            ? CDKTheme.grey
-            : _isHovering
-                ? CDKTheme.grey600
-                : widget.isSelected
-                    ? theme.backgroundSecondary1
-                    : CDKTheme.transparent;
+    BoxDecoration innerDecoration = _isPressed
+        ? CDKGlobals.pressedDecoration
+        : CDKGlobals.elevatedDecoration;
 
-    final Color textColor = theme.isLight
-        ? widget.isSelected && theme.isAppFocused
-            ? theme.accent
-            : theme.colorText
-        : widget.isSelected && theme.isAppFocused
-            ? CDKTheme.white
-            : theme.colorText;
+    Color iconColor = widget.isSelected ? CDKGlobals.primary : CDKGlobals.black;
 
     return MouseRegion(
       onEnter: _onMouseEnter,
@@ -84,35 +66,22 @@ class CDKButtonIconState extends State<CDKButtonIcon> {
         onTapUp: _onTapUp,
         onTapCancel: _onTapCancel,
         onTap: widget.onPressed,
-        child: widget.isCircle
-            ? DecoratedBox(
-                decoration: BoxDecoration(
-                    color: backgroundColor,
-                    borderRadius: BorderRadius.circular(widget.size)),
-                child: Container(
-                    width: widget.size,
-                    height: widget.size,
-                    alignment: Alignment.center,
-                    child: Icon(
-                      widget.icon,
-                      color: textColor,
-                      size: widget.size * 0.5, // Icona més petita que el botó
-                    )),
-              )
-            : DecoratedBox(
-                decoration: BoxDecoration(
-                    color: backgroundColor,
-                    borderRadius: BorderRadius.circular(8)),
-                child: Container(
-                    width: widget.size,
-                    height: widget.size,
-                    alignment: Alignment.center,
-                    child: Icon(
-                      widget.icon,
-                      color: textColor,
-                      size: widget.size * 0.75,
-                    )),
+        child: SizedBox(
+          width: widget.size,
+          height: widget.size,
+          child: DecoratedBox(
+            decoration: decoration,
+            child: Container(
+              decoration: innerDecoration,
+              alignment: Alignment.center,
+              child: Icon(
+                widget.icon,
+                color: iconColor,
+                size: widget.size * 0.5,
               ),
+            ),
+          ),
+        ),
       ),
     );
   }

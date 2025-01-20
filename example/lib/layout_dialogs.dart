@@ -38,8 +38,8 @@ class _LayoutDialogsState extends State<LayoutDialogs> {
       context: context,
       anchorKey: anchorKey,
       type: centered ? CDKDialogPopoverType.center : CDKDialogPopoverType.down,
-      isAnimated: animated,
-      isTranslucent: translucent,
+      isAnimated: false,
+      isTranslucent: false,
       onHide: () {
         // ignore: avoid_print
         print("hide popover $key");
@@ -70,8 +70,8 @@ class _LayoutDialogsState extends State<LayoutDialogs> {
     CDKDialogsManager.showModal(
       key: key,
       context: context,
-      isAnimated: animated,
-      isTranslucent: translucent,
+      isAnimated: false,
+      isTranslucent: false,
       onHide: () {
         // ignore: avoid_print
         print("hide modal $key");
@@ -109,8 +109,8 @@ class _LayoutDialogsState extends State<LayoutDialogs> {
       key: key,
       context: context,
       anchorKey: anchorKey,
-      isAnimated: animated,
-      isTranslucent: translucent,
+      isAnimated: false,
+      isTranslucent: false,
       onHide: () {
         // ignore: avoid_print
         print("hide draggable $key");
@@ -149,8 +149,8 @@ class _LayoutDialogsState extends State<LayoutDialogs> {
       key: key,
       context: context,
       anchorKey: anchorKey,
-      isAnimated: animated,
-      isTranslucent: translucent,
+      isAnimated: false,
+      isTranslucent: false,
       onHide: () {
         // ignore: avoid_print
         print("hide arrowed $key");
@@ -253,41 +253,6 @@ class _LayoutDialogsState extends State<LayoutDialogs> {
               },
               child: const Text('Popover'),
             )),
-        Padding(
-            padding: const EdgeInsets.all(8),
-            child: CDKButton(
-              key: _anchorPopover1,
-              style: CDKButtonStyle.normal,
-              isLarge: false,
-              onPressed: () {
-                _showPopover(
-                    context, _anchorPopover1, theme, true, false, true);
-              },
-              child: const Text('Centered translucent'),
-            )),
-        Padding(
-            padding: const EdgeInsets.all(8),
-            child: CDKButton(
-              key: _anchorPopover2,
-              style: CDKButtonStyle.normal,
-              isLarge: false,
-              onPressed: () {
-                _showPopover(
-                    context, _anchorPopover2, theme, true, true, false);
-              },
-              child: const Text('With animation'),
-            )),
-        Padding(
-            padding: const EdgeInsets.all(8),
-            child: CDKButton(
-              key: _anchorPopover3,
-              style: CDKButtonStyle.normal,
-              isLarge: false,
-              onPressed: () {
-                _showPopover(context, _anchorPopover3, theme, true, true, true);
-              },
-              child: const Text('Translucent with animation'),
-            )),
       ]),
       const Padding(padding: EdgeInsets.all(8), child: Text('CDKDialogModal:')),
       Wrap(children: [
@@ -300,36 +265,6 @@ class _LayoutDialogsState extends State<LayoutDialogs> {
                 _showModal(context, theme, false, false);
               },
               child: const Text('Modal'),
-            )),
-        Padding(
-            padding: const EdgeInsets.all(8),
-            child: CDKButton(
-              style: CDKButtonStyle.normal,
-              isLarge: false,
-              onPressed: () {
-                _showModal(context, theme, true, false);
-              },
-              child: const Text('With animation'),
-            )),
-        Padding(
-            padding: const EdgeInsets.all(8),
-            child: CDKButton(
-              style: CDKButtonStyle.normal,
-              isLarge: false,
-              onPressed: () {
-                _showModal(context, theme, false, true);
-              },
-              child: const Text('Translucent'),
-            )),
-        Padding(
-            padding: const EdgeInsets.all(8),
-            child: CDKButton(
-              style: CDKButtonStyle.normal,
-              isLarge: false,
-              onPressed: () {
-                _showModal(context, theme, true, true);
-              },
-              child: const Text('Translucent with animation'),
             )),
       ]),
       const Padding(
@@ -346,92 +281,8 @@ class _LayoutDialogsState extends State<LayoutDialogs> {
               },
               child: const Text('Draggable'),
             )),
-        Padding(
-            padding: const EdgeInsets.all(8),
-            child: CDKButton(
-              key: _anchorDraggable1,
-              style: CDKButtonStyle.normal,
-              isLarge: false,
-              onPressed: () {
-                _showDraggable(context, _anchorDraggable1, theme, true, false);
-              },
-              child: const Text('With animation'),
-            )),
-        Padding(
-            padding: const EdgeInsets.all(8),
-            child: CDKButton(
-              key: _anchorDraggable2,
-              style: CDKButtonStyle.normal,
-              isLarge: false,
-              onPressed: () {
-                _showDraggable(context, _anchorDraggable2, theme, false, true);
-              },
-              child: const Text('Translucent'),
-            )),
-        Padding(
-            padding: const EdgeInsets.all(8),
-            child: CDKButton(
-              key: _anchorDraggable3,
-              style: CDKButtonStyle.normal,
-              isLarge: false,
-              onPressed: () {
-                _showDraggable(context, _anchorDraggable3, theme, true, true);
-              },
-              child: const Text('Translucent with animation'),
-            )),
       ]),
       const Padding(padding: EdgeInsets.all(8), child: Text('CDKDialogArrow:')),
-      Wrap(children: [
-        Padding(
-            padding: const EdgeInsets.all(8),
-            child: CDKButton(
-              key: _anchorArrowed0,
-              style: CDKButtonStyle.normal,
-              isLarge: false,
-              onPressed: () {
-                _showPopoverArrowed(
-                    context, _anchorArrowed0, theme, false, false);
-              },
-              child: const Text('Arrowed'),
-            )),
-        Padding(
-            padding: const EdgeInsets.all(8),
-            child: CDKButton(
-              key: _anchorArrowed1,
-              style: CDKButtonStyle.normal,
-              isLarge: false,
-              onPressed: () {
-                _showPopoverArrowed(
-                    context, _anchorArrowed1, theme, true, false);
-              },
-              child: const Text('With animation'),
-            )),
-        Padding(
-            padding: const EdgeInsets.all(8),
-            child: CDKButton(
-              key: _anchorArrowed2,
-              style: CDKButtonStyle.normal,
-              isLarge: false,
-              onPressed: () {
-                _showPopoverArrowed(
-                    context, _anchorArrowed2, theme, false, true);
-              },
-              child: const Text('Translucent'),
-            )),
-        Padding(
-            padding: const EdgeInsets.all(8),
-            child: CDKButton(
-              key: _anchorArrowed3,
-              style: CDKButtonStyle.normal,
-              isLarge: false,
-              onPressed: () {
-                _showPopoverArrowed(
-                    context, _anchorArrowed3, theme, true, true);
-              },
-              child: const Text('Translucent with animation'),
-            )),
-      ]),
-      const SizedBox(height: 8),
       Wrap(crossAxisAlignment: WrapCrossAlignment.center, children: [
         Padding(
             padding: const EdgeInsets.all(8),

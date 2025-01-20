@@ -29,7 +29,7 @@ class CDKDialogOuterShadowPainter extends CustomPainter {
     // Pinta el contorn
     final paintLine = Paint()
       ..strokeWidth = 0.5
-      ..color = isLightTheme ? CDKTheme.grey200 : CDKTheme.grey500
+      ..color = isLightTheme ? CDKTheme.black : CDKTheme.black
       ..style = PaintingStyle.stroke;
 
     canvas.drawPath(pathContour, paintLine);
@@ -64,7 +64,7 @@ class CDKDialogOuterShadowPainter extends CustomPainter {
   }
 
   static Path createContourPath(Rect rect) {
-    const Radius radius = Radius.circular(8);
+    const Radius radius = Radius.circular(0);
     final path = Path();
 
     path.moveTo(rect.left + radius.x, rect.top);

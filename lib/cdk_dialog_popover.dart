@@ -160,9 +160,6 @@ class CDKDialogPopoverState extends State<CDKDialogPopover>
 
     Widget dialogContents = Container(
       key: childKey,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8.0),
-      ),
       child: widget.child,
     );
 

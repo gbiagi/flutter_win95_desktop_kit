@@ -130,35 +130,6 @@ class CDKPickerColorHSVState extends State<CDKPickerColorHSV> {
                 });
               },
             )),
-        const SizedBox(height: 8),
-        SizedBox(
-          width: double.infinity,
-          height: 16,
-          child: Stack(children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(
-                  4.0), // Defineix el radi de les vores arrodonides a 4 pixels
-              child: CustomPaint(
-                painter: CDKUtilShaderGrid(5),
-                child: Container(
-                  height: 14,
-                ),
-              ),
-            ),
-            CDKPickerSliderGradient(
-              colors: _gradientAlphaColors,
-              stops: _gradientAlphaStops,
-              thumbColorBackground: widget.value,
-              value: _alpha,
-              onChanged: (value, color) {
-                setState(() {
-                  _alpha = value;
-                  _callback();
-                });
-              },
-            )
-          ]),
-        ),
       ],
     );
   }

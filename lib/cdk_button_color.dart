@@ -60,7 +60,7 @@ class CDKButtonColorState extends State<CDKButtonColor> {
     // Styling logic depending on the button's style and state.
     decoration = BoxDecoration(
         color: theme.backgroundSecondary0,
-        borderRadius: BorderRadius.circular(6.0),
+        borderRadius: BorderRadius.circular(0.0),
         boxShadow: [shadow]);
 
     return GestureDetector(
@@ -82,7 +82,7 @@ class CDKButtonColorState extends State<CDKButtonColor> {
                 DecoratedBox(
                   decoration: decoration,
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(6.0),
+                    borderRadius: BorderRadius.circular(0.0),
                     child: CustomPaint(
                       painter: CDKUtilShaderGrid(7),
                       child: Row(
@@ -102,7 +102,7 @@ class CDKButtonColorState extends State<CDKButtonColor> {
                 Container(
                   decoration: BoxDecoration(
                     border: Border.all(color: colorBorder, width: 1),
-                    borderRadius: BorderRadius.circular(6.0),
+                    borderRadius: BorderRadius.circular(0.0),
                   ),
                 ),
                 Positioned.fill(

@@ -28,8 +28,8 @@ class CDKProgressCircularState extends State<CDKProgressCircular>
   late AnimationController _controller;
   late Animation<double> _progressAnimation; // Animació per al progrés
   Timer? _timer;
-  final int _animationMillis = 500;
-  final int _animationMillisIndeterminate = 1500;
+  final int _animationMillis = 0;
+  final int _animationMillisIndeterminate = 0;
 
   @override
   void initState() {

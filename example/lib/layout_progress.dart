@@ -14,6 +14,8 @@ class _LayoutProgressState extends State<LayoutProgress> {
   double _progressC = 0.0;
   bool _isRunningC = false;
 
+  bool _isImageVisible = false;
+
   void _toggleIndeterminateL() {
     setState(() {
       _isRunningL = !_isRunningL;
@@ -31,7 +33,7 @@ class _LayoutProgressState extends State<LayoutProgress> {
 
   void _toggleIndeterminateC() {
     setState(() {
-      _isRunningC = !_isRunningC;
+      _isImageVisible = !_isImageVisible;
     });
   }
 
@@ -130,15 +132,17 @@ class _LayoutProgressState extends State<LayoutProgress> {
           alignment: WrapAlignment.start,
           crossAxisAlignment: WrapCrossAlignment.center,
           children: [
-            Padding(
-                padding: const EdgeInsets.all(8),
-                child: SizedBox(
-                    width: 250,
-                    child: CDKProgressCircular(
-                      value: _progressC,
-                      isIndeterminate: true,
-                      isRunning: _isRunningC,
-                    ))),
+            if (_isImageVisible)
+              Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Padding(
+                      padding: const EdgeInsets.only(left: 150),
+                      child: SizedBox(
+                          width: 100,
+                          height: 100,
+                          child: Image.asset('assets/loading_clock.webp'))))
+            else
+              const SizedBox(width: 265, height: 115),
             Padding(
                 padding: const EdgeInsets.all(8),
                 child: CDKButton(

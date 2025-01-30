@@ -41,23 +41,10 @@ class CDKPickerColorState extends State<CDKPickerColor> {
     _rgbBlue = widget.color.blue.toDouble();
     _rgbAlpha = widget.color.alpha.toDouble() / 255;
 
-    return Container(
-        width: 500,
-        height: 500,
+    return SizedBox(
+        width: 355,
+        height: 340,
         child: Row(
-/*                       Container(
-              width: 20,
-              height: 20,
-              decoration: BoxDecoration(
-                color: widget.color,
-                border: Border.all(
-                  color: CDKTheme.grey100,
-                  width: 1,
-                ),
-                borderRadius: BorderRadius.circular(4.0),
-              ),
-            ),
-            const SizedBox(height: 8), */
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -157,10 +144,693 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                   ),
                 ],
               ),
+              const SizedBox(height: 4),
+              Row(
+                children: [
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 4),
+              Row(
+                children: [
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 4),
+              Row(
+                children: [
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 4),
+              Row(
+                children: [
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 4),
+              Row(
+                children: [
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 15),
+              const Text("Custom colors:"),
+              Row(
+                children: [
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 4),
+              Row(
+                children: [
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: widget.color,
+                      border: Border.all(
+                        color: CDKTheme.grey100,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 18),
+              const CDKButton(
+                style: CDKButtonStyle.normal,
+                enabled: false,
+                child: Text("Define custom color"),
+              ),
               const SizedBox(height: 8),
+              const Row(
+                children: [
+                  CDKButton(child: Text("OK")),
+                  SizedBox(width: 8),
+                  CDKButton(child: Text("Cancel")),
+                ],
+              ),
             ]),
+            const SizedBox(width: 8),
             Column(children: [
-              Expanded(
+              const SizedBox(height: 4),
+              SizedBox(
+                width: 180,
+                height: 200,
                 child: RotatedBox(
                   quarterTurns: 3,
                   child: CDKPickerColorHSV(
@@ -173,107 +843,121 @@ class CDKPickerColorState extends State<CDKPickerColor> {
               ),
               const SizedBox(height: 8),
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                SizedBox(
-                    width: 65,
-                    child: CDKFieldNumeric(
-                      value: _rgbRed,
-                      min: 0,
-                      max: 255,
-                      decimals: 0,
-                      increment: 1,
-                      units: "R",
-                      onValueChanged: (value) {
-                        _rgbRed = value;
-                        _callbackRGB();
-                      },
-                    )),
-                SizedBox(
-                    width: 65,
-                    child: CDKFieldNumeric(
-                      value: _rgbGreen,
-                      min: 0,
-                      max: 255,
-                      decimals: 0,
-                      increment: 1,
-                      units: "G",
-                      onValueChanged: (value) {
-                        _rgbGreen = value;
-                        _callbackRGB();
-                      },
-                    )),
-                SizedBox(
-                    width: 65,
-                    child: CDKFieldNumeric(
-                      value: _rgbBlue,
-                      min: 0,
-                      max: 255,
-                      decimals: 0,
-                      increment: 1,
-                      units: "B",
-                      onValueChanged: (value) {
-                        _rgbBlue = value;
-                        _callbackRGB();
-                      },
-                    )),
-              ]),
-              const SizedBox(height: 8),
-              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                SizedBox(
-                    width: 65,
-                    child: CDKFieldNumeric(
-                      value: _rgbAlpha,
-                      min: 0,
-                      max: 1,
-                      decimals: 2,
-                      increment: 0.05,
-                      units: "A",
-                      onValueChanged: (value) {
-                        _rgbAlpha = value;
-                        _callbackRGB();
-                      },
-                    )),
-                SizedBox(
-                    width: 65,
-                    child: CDKFieldColorHex(
-                      value: widget.color.value,
-                      onValueChanged: (value) {
-                        Color color = Color(value | 0xFF000000);
-                        _rgbRed = color.red.toDouble();
-                        _rgbGreen = color.green.toDouble();
-                        _rgbBlue = color.blue.toDouble();
-                        _callbackRGB();
-                      },
-                    )),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(4.0),
-                  child: Container(
-                    width: 65,
-                    height: 22,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: CDKTheme.grey100,
-                        width: 1,
-                      ),
-                      borderRadius: BorderRadius.circular(4.0),
-                    ),
-                    child: CustomPaint(
-                      painter: CDKUtilShaderGrid(7),
-                      child: Row(
-                        children: [
-                          Expanded(
-                              child: Container(
-                            color: widget.color,
-                          )),
-                          Container(
-                            width: 20,
-                            color: Color(widget.color.value | 0xFF000000),
+                Column(
+                  children: [
+                    Row(
+                      children: [
+                        const Text("Hue: "),
+                        SizedBox(
+                          width: 30,
+                          child: CDKFieldNumeric(
+                            value: _rgbRed,
+                            onValueChanged: (value) {
+                              _rgbRed = value;
+                              _callbackRGB();
+                            },
                           ),
-                        ],
-                      ),
+                        ),
+                        const SizedBox(width: 4),
+                      ],
                     ),
-                  ),
+                    const SizedBox(height: 4),
+                    Row(
+                      children: [
+                        const SizedBox(width: 7),
+                        const Text("Sat: "),
+                        SizedBox(
+                          width: 30,
+                          child: CDKFieldNumeric(
+                            value: _rgbGreen,
+                            onValueChanged: (value) {
+                              _rgbGreen = value;
+                              _callbackRGB();
+                            },
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                      ],
+                    ),
+                    const SizedBox(height: 4),
+                    Row(
+                      children: [
+                        const Text("Lum: "),
+                        SizedBox(
+                          width: 30,
+                          child: CDKFieldNumeric(
+                            value: _rgbBlue,
+                            onValueChanged: (value) {
+                              _rgbBlue = value;
+                              _callbackRGB();
+                            },
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(width: 4),
+                Column(
+                  children: [
+                    Row(
+                      children: [
+                        const SizedBox(width: 15),
+                        const Text("Red: "),
+                        SizedBox(
+                          width: 30,
+                          child: CDKFieldNumeric(
+                            value: _rgbRed,
+                            onValueChanged: (value) {
+                              _rgbRed = value;
+                              _callbackRGB();
+                            },
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                      ],
+                    ),
+                    const SizedBox(height: 4),
+                    Row(
+                      children: [
+                        const Text("Green: "),
+                        SizedBox(
+                          width: 30,
+                          child: CDKFieldNumeric(
+                            value: _rgbGreen,
+                            onValueChanged: (value) {
+                              _rgbGreen = value;
+                              _callbackRGB();
+                            },
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                      ],
+                    ),
+                    const SizedBox(height: 4),
+                    Row(
+                      children: [
+                        const SizedBox(width: 13),
+                        const Text("Blue: "),
+                        SizedBox(
+                          width: 30,
+                          child: CDKFieldNumeric(
+                            value: _rgbBlue,
+                            onValueChanged: (value) {
+                              _rgbBlue = value;
+                              _callbackRGB();
+                            },
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                      ],
+                    ),
+                  ],
                 ),
               ]),
+              const SizedBox(height: 10),
+              const CDKButton(child: Text("Add custom colors")),
             ])
           ],
         ));

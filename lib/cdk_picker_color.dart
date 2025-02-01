@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'cdk.dart';
 
 // Copyright © 2023 Albert Palacios. All Rights Reserved.
@@ -56,7 +57,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.red,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -69,7 +70,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.pink,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -82,7 +83,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.purple,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -95,7 +96,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.deepPurple,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -108,7 +109,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.indigo,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -121,7 +122,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.blue,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -134,7 +135,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.lightBlue,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -151,7 +152,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.cyan,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -164,7 +165,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.teal,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -177,7 +178,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.green,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -190,7 +191,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.lightGreen,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -203,7 +204,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.lime,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -216,7 +217,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.yellow,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -229,7 +230,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.amber,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -246,7 +247,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.orange,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -259,7 +260,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.deepOrange,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -272,7 +273,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.brown,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -285,7 +286,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.grey,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -298,7 +299,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.blueGrey,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -311,7 +312,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.black,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -324,7 +325,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.white,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -341,7 +342,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.brown,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -354,7 +355,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.grey,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -367,7 +368,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.blueGrey,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -380,7 +381,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.cyanAccent,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -393,7 +394,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.white70,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -406,7 +407,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.black54,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -419,7 +420,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.blueAccent,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -436,7 +437,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.redAccent,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -449,7 +450,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.pinkAccent,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -462,7 +463,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.purpleAccent,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -475,7 +476,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.deepPurpleAccent,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -488,7 +489,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.indigoAccent,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -501,7 +502,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.blueAccent,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -514,7 +515,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.lightBlueAccent,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -531,7 +532,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.red,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -544,7 +545,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.white60,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -557,7 +558,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.black45,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -570,7 +571,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.blueAccent,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -583,7 +584,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.blueGrey,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -596,7 +597,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.brown,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -609,7 +610,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.grey,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -627,7 +628,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.white,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -640,7 +641,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.white,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -653,7 +654,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.white,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -666,7 +667,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.white,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -679,7 +680,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.white,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -692,7 +693,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.white,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -705,7 +706,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.white,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -722,7 +723,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.white,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -735,7 +736,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.white,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -748,7 +749,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.white,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -761,7 +762,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.white,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -774,7 +775,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.white,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -787,7 +788,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.white,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -800,7 +801,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      color: widget.color,
+                      color: Colors.white,
                       border: Border.all(
                         color: CDKTheme.grey100,
                         width: 1,
@@ -853,7 +854,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                           child: CDKFieldNumeric(
                             value: _rgbRed,
                             onValueChanged: (value) {
-                              _rgbRed = value;
+                              value = widget.color.hashCode.toDouble();
                               _callbackRGB();
                             },
                           ),
@@ -871,7 +872,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                           child: CDKFieldNumeric(
                             value: _rgbGreen,
                             onValueChanged: (value) {
-                              _rgbGreen = value;
+                              value = widget.color.alpha.toDouble() / 255;
                               _callbackRGB();
                             },
                           ),
@@ -888,7 +889,7 @@ class CDKPickerColorState extends State<CDKPickerColor> {
                           child: CDKFieldNumeric(
                             value: _rgbBlue,
                             onValueChanged: (value) {
-                              _rgbBlue = value;
+                              value = widget.color.computeLuminance();
                               _callbackRGB();
                             },
                           ),

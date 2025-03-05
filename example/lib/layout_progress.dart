@@ -12,7 +12,7 @@ class _LayoutProgressState extends State<LayoutProgress> {
   double _progressL = 0.0;
   bool _isRunningL = false;
   double _progressC = 0.0;
-  bool _isRunningC = false;
+  final bool _isRunningC = false;
 
   bool _isImageVisible = false;
 

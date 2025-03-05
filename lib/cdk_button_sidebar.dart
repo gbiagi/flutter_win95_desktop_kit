@@ -40,7 +40,7 @@ class CDKButtonSidebar extends StatelessWidget {
                 ? const EdgeInsets.fromLTRB(8, 6, 8, 8)
                 : const EdgeInsets.fromLTRB(8, 6, 8, 6),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(4.0),
+              borderRadius: BorderRadius.circular(0.0),
               color: colorBackground,
             ),
             child: child is Text

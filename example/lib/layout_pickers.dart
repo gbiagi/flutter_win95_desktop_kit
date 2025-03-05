@@ -9,7 +9,7 @@ class LayoutPickers extends StatefulWidget {
 }
 
 class _LayoutPickersState extends State<LayoutPickers> {
-  double _angle = 0.0;
+  final double _angle = 0.0;
   double _valueSlider = 0.5;
   int _selectedIndexButtonsSegmented0 = 1;
   int _selectedIndexButtonsSegmented1 = 1;

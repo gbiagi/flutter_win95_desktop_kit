@@ -77,7 +77,7 @@ class CDKButtonSelectState extends State<CDKButtonSelect> {
       decoration = BoxDecoration(
           color: theme.backgroundSecondary0,
           border: Border.all(color: theme.backgroundSecondary1),
-          borderRadius: BorderRadius.circular(6.0),
+          borderRadius: BorderRadius.circular(0.0),
           boxShadow: [shadow]);
     } else {
       decoration = const BoxDecoration();
@@ -125,7 +125,7 @@ class CDKButtonSelectState extends State<CDKButtonSelect> {
                               : _isMouseOver
                                   ? null
                                   : theme.backgroundSecondary1,
-                          borderRadius: BorderRadius.circular(4),
+                          borderRadius: BorderRadius.circular(0),
                         ),
                         child: Container(
                             alignment: Alignment.center,

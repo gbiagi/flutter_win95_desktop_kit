@@ -2,7 +2,6 @@ import 'package:flutter/widgets.dart';
 import 'cdk_globals.dart';
 
 // Custom font import
-import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 
 enum CDKButtonStyle { action, normal, destructive }
